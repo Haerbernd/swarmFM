@@ -4,6 +4,11 @@ A simple Python program that streams the [SwarmFM YouTube Stream](https://www.yo
 
 It uses both VLC and Tk to do it. You can change between the audio only stream or with video.
 
+The following two projects might also interest you:
+
+- [SwarmFM Player by gwashark](https://github.com/gwashark/swarmfm-player)
+- [SwarmFM Extension by tywaraxe](https://github.com/tywaraxe/SwarmFM-Extension)
+
 ## Requirements
 - A functioning Python installation (with pip).
 - Tk
