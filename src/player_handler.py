@@ -69,7 +69,8 @@ def set_volume(value: str) -> None:
     config_handler.save_settings(volume=volume)
 
 
-def exit_program(root: tk.Tk) -> None:
+def exit_program() -> None:
     """Stops playback and exits the application."""
     stop_stream()
-    root.destroy()
+    print("Quit SwarmFM")
+    sys.exit(0)
