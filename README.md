@@ -16,7 +16,7 @@ It uses both VLC and Tk to do it. You can change between the audio only stream o
 ## Installation
 Pull the Repo and cd into it
 
-`git pull github.com/haerbernd/swarmFM`
+`git pull https://github.com/Haerbernd/swarmFM`
 
 `cd swarmFM`
 
