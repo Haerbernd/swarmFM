@@ -20,7 +20,7 @@ muted: bool = False
 current_mode: str = "audio"  # <-- -- -->
 
 
-def get_stream_url(video: bool = True, yt_url: str = "https://www.youtube.com/watch?v=thCiTnOzkOM") -> str:
+def get_stream_url(video: bool = True, yt_url: str = "https://www.youtube.com/@boop/live") -> str:
     """Fetches the direct stream URL from YouTube."""
     format_option: str = "best" if video else "bestaudio"
     ydl_opts: dict = {
