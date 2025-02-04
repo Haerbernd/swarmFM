@@ -14,7 +14,7 @@ def get_config_path() -> str:
 
     if user_os == "windows":
         shell: subprocess = subprocess.Popen('whoami', shell=True, stdout=subprocess.PIPE)
-        user: str = shell.communicate()[0].decode().split('\\')[-1].replace("\n", '')
+        user: str = shell.communicate()[0].decode().split('\\')[-1].replace("\n", '').replace("\r", "")
         config_path: str = f"C:/Users/{user}/AppData/Roaming/SwarmFM/config.json"
     elif user_os == 'linux' or 'linux2':
         shell = subprocess.Popen('logname', shell=True, stdout=subprocess.PIPE)
