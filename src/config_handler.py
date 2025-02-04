@@ -29,7 +29,7 @@ def get_config_path() -> str:
     if os.path.exists(config_path):
         return config_path
 
-    os.mkdir(config_path)
+    os.mkdir(config_path.replace("/config.json", ""))
     return config_path
 
 
