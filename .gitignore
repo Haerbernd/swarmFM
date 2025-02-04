@@ -3,3 +3,4 @@ swarmFM-with-vlc*
 **/.venv/**
 **/.idea/**
 **/__pycache__/**
+**/_old/**
