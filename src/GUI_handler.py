@@ -50,7 +50,7 @@ def init() -> (tk.Tk, tk.Canvas):
                                        .start_stream(video=True, video_canvas=video_canvas))
     stop_btn: ttk.Button = ttk.Button(control_frame, text="Stop", command=player_handler.stop_stream)
     mute_btn: ttk.Button = ttk.Button(control_frame, text="Mute/Unmute", command=player_handler.toggle_mute)
-    # exit_btn: ttk.Button = ttk.Button(control_frame, text="Exit", command=player_handler.exit_program(root))
+    exit_btn: ttk.Button = ttk.Button(control_frame, text="Exit", command=player_handler.exit_program)
 
     volume_label: ttk.Label = ttk.Label(control_frame, text="Volume")
     volume_slider: ttk.Scale = ttk.Scale(control_frame, from_=0, to=100, orient="horizontal",
@@ -62,7 +62,7 @@ def init() -> (tk.Tk, tk.Canvas):
     video_btn.grid(row=0, column=1, padx=5)
     stop_btn.grid(row=0, column=2, padx=5)
     mute_btn.grid(row=0, column=3, padx=5)
-    # exit_btn.grid(row=0, column=4, padx=5)
+    exit_btn.grid(row=0, column=4, padx=5)
     volume_label.grid(row=1, column=0, padx=5)
     volume_slider.grid(row=1, column=1, columnspan=4, sticky="ew")
 
