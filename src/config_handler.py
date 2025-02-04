@@ -2,6 +2,7 @@ import json
 import os
 import platform
 import subprocess
+from typing import TextIO
 
 from src import player_handler
 
@@ -15,21 +16,27 @@ def get_config_path() -> str:
     if user_os == "windows":
         shell: subprocess = subprocess.Popen('whoami', shell=True, stdout=subprocess.PIPE)
         user: str = shell.communicate()[0].decode().split('\\')[-1].replace("\n", '').replace("\r", "")
-        config_path: str = f"C:/Users/{user}/AppData/Roaming/SwarmFM/config.json"
+        config_path: str = f"C:/Users/{user}/AppData/Roaming/SwarmFM/"
     elif user_os == 'linux' or 'linux2':
         shell = subprocess.Popen('logname', shell=True, stdout=subprocess.PIPE)
         #  Notice: The usage of "logname" returns the username the user logged into -> sudo resistant
         user = shell.communicate()[0].decode().replace("\n", '')
-        config_path: str = f"/home/{user}/.config/SwarmFM/config.json"
+        config_path: str = f"/home/{user}/.config/SwarmFM"
     elif user_os == 'darwin':
-        config_path: str = "~/Library/Application Support/config.json"
+        config_path: str = "~/Library/Application Support"
     else:
-        config_path: str = "./config/config.json"
+        config_path: str = "./config"
 
     if os.path.exists(config_path):
-        return config_path
+        if os.path.exists(f"{config_path}/config.json"):
+            return f"{config_path}/config.json"
+        file: TextIO = open(f"{config_path}/config.json", "w")
+        file.close()
+        return f"{config_path}/config.json"
 
     os.mkdir(config_path.replace("/config.json", ""))
+    file: TextIO = open(f"{config_path}/config.json", "w")
+    file.close()
     return config_path
 
 
