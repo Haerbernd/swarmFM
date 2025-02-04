@@ -8,5 +8,5 @@ def init() -> Tuple:
     :return: The root Tk instance and the video canvas.
     """
 
-    root, video_canvas = GUI_handler.init()
+    (root, video_canvas) = GUI_handler.init()
     return root, video_canvas
