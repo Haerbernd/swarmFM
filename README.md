@@ -2,7 +2,9 @@
 
 A simple Python program that streams the [SwarmFM YouTube Stream](https://www.youtube.com/@boop/live).
 
-It uses both VLC and Tk to do it. You can change between the audio only stream or with video.
+It uses VLC, yt-dlp and Tk to do it. You can change between the audio only stream or with video.
+
+It is only available for desktop right now, but I might add Android support later. _Please also notice that as I don't own an Apple device and don't intend to change that, I am not able to test it on MacOS. I can only tell you that it **should** work, not that it will. If you can and want to verify the function of a build on MacOS, please do so._
 
 The following two projects might also interest you:
 
