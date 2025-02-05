@@ -21,7 +21,7 @@ The following two projects might also interest you:
     - I can't speak for other Distros, but you might need to install it via your package manager (i.e.: `sudo apt install tk`, `sudo pacman -S tk`, etc.)
 
 ## Installation
-_Attention: There might be problems with you existing VLC installation (especially on Windows). I still have to find out the source of the problem. If you want to be sure that everything works, as intended, I would recommend you using a venv._
+_Attention: There might be problems with your existing VLC installation (especially on Windows). I still have to find out the source of the problem. If you want to be sure that everything works, as intended, I would recommend you using a venv. But even then it works in general._
 
 Pull the Repo and cd into it
 
